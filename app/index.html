@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI · All 55 PS5 Trophies</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PS5: roadmap to the platinum, missable flags, cited guides, saved checklist.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">Every one of the 55 official trophies — name, description and grade as PlayStation publishes them — with a roadmap to the platinum, the missable ones flagged, and a guide to each in our own words, with its sources named. No account, no network, no ads: your progress lives in this browser.</p>
+    <div class="tallies" id="tallies" aria-label="Trophy counts"></div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span id="progressText">0 of 55 earned · 0%</span><span id="gradeText"></span></div>
+      <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="panel roadmap" id="roadmap" aria-labelledby="roadmapTitle">
+    <h2 id="roadmapTitle">Roadmap to the platinum</h2>
+    <p class="panel-note">Built from the official descriptions: story first, side strands second, the long grinds third, cleanup last. Around 200 hours in all. There is no mission replay and no New Game Plus, so keep a manual save at the start of every chapter — the game gives you 15 manual slots plus one autosave — and one untouched save from just before the final mission.</p>
+    <ol class="stages" id="stages"></ol>
+    <p class="warn"><strong>Watch out:</strong> <span id="missableSummary"></span></p>
+  </section>
+
+  <section class="panel controls" aria-label="Tracker controls">
+    <div class="control-row">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or description…" autocomplete="off"></label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+      <label class="check"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers until earned</label>
+    </div>
+    <div class="kind-row" id="kindRow" role="group" aria-label="Filter by kind"></div>
+    <div class="control-row">
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button id="resetBtn" type="button" class="danger">Reset progress</button>
+      <span class="saved-note" id="savedNote">Progress saves in this browser automatically.</span>
+    </div>
+    <p class="count-line" id="countLine"></p>
+  </section>
+
+  <div class="layout">
+    <section class="panel list-panel" aria-labelledby="listTitle">
+      <h2 id="listTitle">Trophy checklist</h2>
+      <p class="panel-note" id="onlineNote">No online trophies: all 55 are offline, single-player. The “Online” filter therefore shows none — by design, not by mistake.</p>
+      <ul class="trophy-list" id="trophyList"></ul>
+      <p class="empty" id="emptyState" hidden>No trophies match these filters. Try clearing the search or choosing another kind.</p>
+    </section>
+
+    <aside class="panel detail-panel" id="detailPanel" aria-labelledby="detailTitle" aria-live="polite">
+      <h2 id="detailTitle">Trophy guide</h2>
+      <div id="detailBody">
+        <p class="panel-note">Select any trophy in the checklist to read its full guide here — what to do, where, how, when it can be missed, and the sources each fact comes from.</p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="panel about" aria-labelledby="aboutTitle">
+    <h2 id="aboutTitle">About this guide</h2>
+    <p>Names, descriptions, grades, hidden flags and PSN progress targets are the official PlayStation 5 list, as mirrored by Exophase and PSNProfiles and checked on 19 November 2026 — the two sources agree on every name, description and grade. The guides are original writing for this entry. Where a specific step comes from a published guide, that guide is named beside the trophy. Five trophies had no confirmed unlock method at launch; their guides say so plainly instead of inventing one. The roadmap and the missable flag are built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order.</p>
+    <p class="sources-line">Sources: <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase — GTA VI trophies</a> · <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles — GTA VI trophies</a> · <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 trophy list</a></p>
+    <p class="fineprint">Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo or official artwork is used. Works fully offline: it loads only its own files and makes no network request.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide — an offline, open-source GTA VI trophy tracker. Progress is stored only in your browser (localStorage).</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
